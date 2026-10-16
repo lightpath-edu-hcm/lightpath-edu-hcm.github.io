@@ -173,3 +173,13 @@
   .contact-header { min-height: 64px; }
   .contact-header .brand span { top: 32px; }
 }
+
+/* Mobile Header keeps enlarged text in normal flow, with wrapping controls. */
+@media (max-width: 900px) {
+  .contact-header .brand { min-width: 0; max-width: 100%; white-space: normal; }
+  .contact-header .brand-logo { flex-shrink: 0; }
+  .contact-header .brand span { position: static; inset: auto; transform: none; white-space: normal; overflow-wrap: anywhere; line-height: 1.15; }
+  .header-contact-toggle { max-width: 100%; white-space: normal; }
+  .header-contact-links a { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+  .header-contact-links a span { min-width: 0; overflow-wrap: anywhere; }
+}
