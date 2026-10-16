@@ -9,8 +9,26 @@ const logoPath = '/brand/light-path-logo.webp'
 const navigate = (path) => { window.history.pushState({}, '', path); window.dispatchEvent(new PopStateEvent('popstate')) }
 function usePathname() { const [path, setPath] = useState(window.location.pathname); useEffect(() => { const listener = () => setPath(window.location.pathname); window.addEventListener('popstate', listener); return () => window.removeEventListener('popstate', listener) }, []); return path }
 function LinkButton({ to, children, className = '', label, onClick }) { return <button type="button" className={className} onClick={() => { onClick?.(); navigate(to) }} aria-label={label}>{children}</button> }
+function ContactIcon({ kind }) {
+  const paths = {
+    phone: 'M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 4.1 4.1l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z',
+    email: 'M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm-2 2 10 7L22 6',
+    facebook: 'M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5c-.4-.1-1.6-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h3v8',
+    contact: 'M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2V11.5a9.5 9.5 0 1 1 19 0ZM7 10h10M7 14h6',
+  }
+  return <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d={paths[kind]} /></svg>
+}
 function SiteHeader() {
-  return <header className="site-header simple-header"><LinkButton to="/" className="brand" label="Light Path - Trang chủ"><img className="brand-logo" src={logoPath} alt="" /><span>Light Path</span></LinkButton></header>
+  const [contactsOpen, setContactsOpen] = useState(false)
+  return <header className="site-header simple-header contact-header">
+    <LinkButton to="/" className="brand" label="Light Path - Trang chủ"><img className="brand-logo" src={logoPath} alt="" /><span>Light Path</span></LinkButton>
+    <button type="button" className="header-contact-toggle" aria-expanded={contactsOpen} aria-controls="header-contacts" onClick={() => setContactsOpen((open) => !open)}><ContactIcon kind="contact" /><span>Liên hệ</span></button>
+    <nav id="header-contacts" className={'header-contact-links' + (contactsOpen ? ' is-open' : '')} aria-label="Liên hệ Light Path">
+      <a className="header-contact-phone" href="tel:0348537158"><ContactIcon kind="phone" /><span>0348 537 158</span></a>
+      <a className="header-contact-email" href="mailto:lightpath.edu.vn@gmail.com"><ContactIcon kind="email" /><span>lightpath.edu.vn@gmail.com</span></a>
+      <a className="header-contact-facebook" href="https://www.facebook.com/profile.php?id=61595187590395" target="_blank" rel="noopener noreferrer"><ContactIcon kind="facebook" /><span>Lightpath</span></a>
+    </nav>
+  </header>
 }
 function Breadcrumb({ items }) { return <nav className="breadcrumb" aria-label="Đường dẫn">{items.map((item, index) => <span key={item.label}>{item.path ? <LinkButton to={item.path}>{item.label}</LinkButton> : item.label}{index < items.length - 1 && <b>›</b>}</span>)}</nav> }
 function Status({ status }) { return <span className={`status ${status}`}>{status === 'published' || status === 'active' ? 'Sẵn sàng' : 'Sắp ra mắt'}</span> }

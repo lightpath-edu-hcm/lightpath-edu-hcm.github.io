@@ -145,3 +145,31 @@
 @media (max-width: 680px) {
   .lesson-player--shared-mobile-home .lesson-toolbar { display: none; }
 }
+
+/* Owner-approved Header contacts; lesson UI and page styles stay unchanged. */
+.contact-header { column-gap: 16px; }
+.contact-header .brand span { top: 36px; transform: translate(-50%, -50%); }
+.header-contact-toggle { display: none; }
+.header-contact-links { margin-left: auto; display: grid; grid-template-columns: auto auto; column-gap: 18px; font-size: 16px; line-height: 1.15; }
+.header-contact-links a { display: inline-flex; align-items: center; gap: 8px; min-height: 24px; color: #fff; text-decoration: none; white-space: nowrap; border-radius: 6px; }
+.header-contact-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.header-contact-links a:focus-visible, .header-contact-toggle:focus-visible { outline: 3px solid #f7bd35; outline-offset: 3px; }
+.header-contact-links svg, .header-contact-toggle svg { width: 18px; height: 18px; flex: 0 0 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.header-contact-phone { grid-column: 1; grid-row: 1; }
+.header-contact-facebook { grid-column: 2; grid-row: 1; }
+.header-contact-email { grid-column: 1 / -1; grid-row: 2; }
+@media (min-width: 1440px) {
+  .header-contact-links { display: flex; gap: 20px; }
+  .header-contact-links a { min-height: 44px; }
+}
+@media (max-width: 900px) {
+  .contact-header { height: auto; min-height: 72px; flex-wrap: wrap; row-gap: 0; }
+  .header-contact-toggle { margin-left: auto; min-height: 44px; padding: 8px 10px; display: inline-flex; align-items: center; gap: 7px; color: #fff; border: 1px solid #ffffff80; border-radius: 10px; background: transparent; font-size: 16px; cursor: pointer; }
+  .header-contact-links { display: none; width: 100%; margin: 0; padding: 8px 0 6px; }
+  .header-contact-links.is-open { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .header-contact-links a { grid-column: auto; grid-row: auto; min-height: 44px; padding: 0 10px; width: fit-content; max-width: 100%; }
+}
+@media (max-width: 680px) {
+  .contact-header { min-height: 64px; }
+  .contact-header .brand span { top: 32px; }
+}
