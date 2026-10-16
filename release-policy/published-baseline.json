@@ -1,5 +1,18 @@
 {
   "schemaVersion": 1,
-  "verifiedRepositoryCommit": "b2bbef19aa4f6adc1d0274ecc28f0d63a52928a7",
-  "lessons": []
+  "verifiedRepositoryCommit": "1bb4ac78c95ac9b2f6748113efbc389116302332",
+  "lessons": [
+    {
+      "id": "lesson-001",
+      "order": 1,
+      "slug": "bai-01",
+      "titleVi": "Đếm trong phạm vi 10",
+      "titleEn": "Count Each Object Once",
+      "moduleId": "readiness-quantity",
+      "path": "/lessons/lesson-001/index.html",
+      "htmlSHA256": "1f206c62ce9097cdcb5a9a5a71d8ac461742f5c11766c31542f6dec1167c8347",
+      "assets": [],
+      "approvalRef": "owner:20261016-lesson001-r3-1f206c62"
+    }
+  ]
 }
