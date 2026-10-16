@@ -10,7 +10,9 @@ export const moduleManifest = [
     "descriptionEn": "Count, make groups, and recognise quantity.",
     "order": 1,
     "status": "active",
-    "lessonIds": []
+    "lessonIds": [
+      "lesson-001"
+    ]
   },
   {
     "id": "readiness-compare-order",
