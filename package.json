@@ -1,0 +1,34 @@
+{
+  "name": "elightpath-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/pages/build.mjs",
+    "build:pages": "node scripts/pages/build.mjs",
+    "verify:source": "node scripts/pages/verify-source.mjs",
+    "verify:pages": "node scripts/pages/verify.mjs",
+    "prepare:release": "node scripts/pages/prepare-release.mjs",
+    "test:policy": "node scripts/pages/policy-test.mjs",
+    "qa:pages": "node scripts/pages/qa.mjs",
+    "lint": "oxlint src scripts/pages vite.config.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "vite": "^8.3.0"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.19.0 <25"
+  }
+}

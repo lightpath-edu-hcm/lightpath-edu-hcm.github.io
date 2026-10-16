@@ -1,0 +1,89 @@
+name: Light Path Pages Candidate
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Publish only after owner approval
+        type: boolean
+        default: false
+      confirmation:
+        description: Type PUBLISH_LIGHT_PATH only after approval
+        type: string
+        default: ''
+      approved_artifact_sha256:
+        description: Reviewed artifact hash from a successful build-only run
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+concurrency:
+  group: lightpath-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    outputs:
+      artifact_hash: ${{ steps.verify.outputs.artifact_hash }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        with:
+          version: '11.25.0'
+          run_install: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24.19.0'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm lint
+      - run: pnpm test:policy
+      - run: pnpm verify:source
+      - run: pnpm build:pages
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm qa:pages
+      - run: pnpm prepare:release
+      - id: verify
+        run: pnpm verify:pages
+      - name: Require explicit approval for requested deployment
+        if: ${{ inputs.deploy }}
+        env:
+          CONFIRMATION: ${{ inputs.confirmation }}
+          APPROVED_HASH: ${{ inputs.approved_artifact_sha256 }}
+          BUILT_HASH: ${{ steps.verify.outputs.artifact_hash }}
+        run: |
+          test "$GITHUB_REPOSITORY" = "lightpath-edu-hcm/lightpath-edu-hcm.github.io"
+          test "$GITHUB_REF" = "refs/heads/main"
+          test "$CONFIRMATION" = "PUBLISH_LIGHT_PATH"
+          test -n "$APPROVED_HASH"
+          test "$APPROVED_HASH" = "$BUILT_HASH"
+      - name: Record reviewed artifact hash
+        env:
+          ARTIFACT_HASH: ${{ steps.verify.outputs.artifact_hash }}
+        run: echo "Artifact SHA256 (sorted path/hash inventory) $ARTIFACT_HASH" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ./dist
+          retention-days: 7
+
+  deploy:
+    if: ${{ inputs.deploy && github.ref == 'refs/heads/main' && github.repository == 'lightpath-edu-hcm/lightpath-edu-hcm.github.io' }}
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

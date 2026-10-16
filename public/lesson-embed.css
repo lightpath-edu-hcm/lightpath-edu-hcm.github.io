@@ -1,0 +1,222 @@
+/*
+  Layout support supplied by the central Player.  The lesson files remain
+  unchanged; these rules only apply when a short browser viewport needs a
+  denser arrangement.
+*/
+/* These density adjustments are for narrow, short phone viewports only.
+   A desktop browser can have less than 700px of usable height after its
+   browser chrome is included, so height alone must never select this block. */
+@media (max-width: 680px) and (max-height: 700px) {
+  /* Lesson 001's five-screen layout */
+  .lesson .topbar { padding: 6px 12px !important; gap: 8px !important; }
+  .lesson .brand-logo { width: 44px !important; height: 44px !important; }
+  .lesson .brand-slogan { font-size: 1.1rem !important; }
+  .lesson .lesson-subbar { min-height: 22px !important; margin-top: 3px !important; }
+  .lesson .screen { padding: 5px 14px !important; }
+  .lesson .instruction-only { margin-bottom: 5px !important; padding: 7px 14px !important; }
+  .lesson .play-area { gap: 8px !important; }
+  .lesson .zone { padding: 7px !important; }
+  .lesson .zone-title { margin-bottom: 5px !important; }
+  .lesson .ten-frame { grid-template-rows: repeat(2, 60px) !important; row-gap: 6px !important; }
+  .lesson .object.placed { max-width: 42px !important; max-height: 42px !important; }
+  .lesson .feedback { min-height: 34px !important; padding: 5px !important; }
+  .lesson .answers { gap: 8px !important; }
+  .lesson .answer-btn, .lesson .primary, .lesson .secondary { min-height: 46px !important; }
+  .lesson .answer-btn { min-width: 62px !important; font-size: 1.35rem !important; }
+  .lesson .actions { padding-top: 6px !important; }
+  /* The sound control belongs with the language switch in the header. */
+  .lesson { position: relative !important; }
+  .lesson .sound-row {
+    position: absolute !important;
+    top: 7px !important;
+    right: clamp(118px, 12vw, 156px) !important;
+    z-index: 9 !important;
+    padding: 0 !important;
+  }
+  .lesson .sound-toggle { width: 42px !important; height: 42px !important; }
+
+  /* Keep Back inside the lesson at the lower right without allocating a
+     footer, so the action buttons remain fully visible. */
+  .lesson .back-row {
+    position: absolute !important;
+    right: 12px !important;
+    bottom: 10px !important;
+    z-index: 8 !important;
+    padding: 0 !important;
+  }
+  .lesson .back-btn { width: 42px !important; height: 42px !important; }
+
+  /* Other standalone lessons use an .app shell. */
+  .app .header { min-height: 52px !important; }
+  .app .logo { width: 42px !important; height: 42px !important; }
+  .app .main { padding-top: 3px !important; padding-bottom: 5px !important; gap: 5px !important; }
+  .app .prompt { padding: 6px 12px !important; }
+  .app .actions { min-height: 46px !important; }
+
+  /* Lesson 002 and the later lesson shells. */
+  .lesson-app .lesson-header {
+    min-height: 62px !important;
+    padding-block: 7px !important;
+  }
+  .lesson-app .brand img { width: 40px !important; height: 40px !important; }
+  .lesson-app .lesson-header h1 { font-size: clamp(18px, 2.3vw, 25px) !important; }
+  .lesson-app .header-controls { gap: 5px !important; }
+  .lesson-app .language-switch button,
+  .lesson-app .sound { min-width: 38px !important; min-height: 38px !important; }
+  .lesson-app .lesson-progress { padding-top: 6px !important; padding-bottom: 2px !important; }
+  .lesson-app .screen { padding: 6px 18px 10px !important; gap: 7px !important; }
+  .lesson-app .instruction { padding: 7px 13px !important; font-size: clamp(16px, 1.8vw, 21px) !important; }
+  .lesson-app .scene { min-height: 180px !important; padding: 10px !important; }
+  .lesson-app .bibo { max-height: 175px !important; }
+  .lesson-app .item { font-size: clamp(34px, 5vw, 58px) !important; }
+  .lesson-app .cards,
+  .lesson-app .fish-grid { gap: 8px !important; }
+  .lesson-app .card,
+  .lesson-app .choice,
+  .lesson-app .fish { min-height: 56px !important; }
+  .lesson-app .finish .bibo { width: min(125px, 18vw) !important; max-height: 130px !important; }
+  .lesson-app .finish p { font-size: clamp(18px, 2.3vw, 24px) !important; }
+  .lesson-app .primary,
+  .lesson-app .secondary { min-height: 44px !important; padding: 8px 22px !important; }
+  .lesson-app .back-icon { width: 42px !important; height: 42px !important; bottom: 10px !important; right: 10px !important; }
+}
+
+/* Lesson 001 control placement is consistent at every viewport height. */
+.lesson { position: relative !important; }
+.lesson .sound-row {
+  position: absolute !important;
+  top: 7px !important;
+  right: clamp(118px, 12vw, 156px) !important;
+  z-index: 9 !important;
+  padding: 0 !important;
+}
+.lesson .sound-toggle { width: 42px !important; height: 42px !important; }
+.lesson .back-row {
+  position: absolute !important;
+  right: 12px !important;
+  bottom: 10px !important;
+  z-index: 8 !important;
+  padding: 0 !important;
+}
+.lesson .back-btn { width: 42px !important; height: 42px !important; }
+
+/* Lesson 001 mobile header trial. Progress remains in the lesson subbar. */
+.lesson .lesson-home-slot { display: none; }
+@media (max-width: 680px) {
+  .lesson .topbar {
+    grid-template-columns: 44px minmax(0, 1fr) auto !important;
+    grid-template-areas: "reserved logo controls" "title title title";
+    gap: 5px 7px !important;
+    padding: 7px 9px 8px !important;
+  }
+  .lesson .lesson-home-slot { grid-area: reserved; width: 44px; height: 44px; display: grid; place-items: center; padding: 0; color: #fff; border: 0; border-radius: 50%; background: rgba(255,255,255,.18); cursor: pointer; }
+  .lesson .lesson-home-slot svg { width: 23px; height: 23px; fill: currentColor; }
+  .lesson .brand { grid-area: logo !important; }
+  .lesson .brand-logo { width: 38px !important; height: 38px !important; }
+  .lesson .brand-slogan { grid-area: title !important; width: 100%; max-width: 100%; overflow: hidden; text-overflow: ellipsis; font-size: clamp(.9rem, 4.3vw, 1.08rem) !important; line-height: 1.12 !important; text-align: center; white-space: nowrap; transform: none !important; }
+  .lesson .language-switch { grid-area: controls !important; }
+  .lesson .lang-btn { min-width: 36px !important; min-height: 40px !important; }
+  .lesson .sound-row { top: 7px !important; right: 94px !important; z-index: 12 !important; }
+  .lesson .sound-toggle { width: 42px !important; height: 42px !important; }
+}
+
+
+
+
+/* Shared Lesson Player mobile Home slot. Each lesson renders this small slot
+   inside its existing header, so it survives every lesson re-render. */
+.lesson-home-slot { display: none; }
+.lesson-home-slot svg { width: 23px; height: 23px; fill: currentColor; }
+@media (max-width: 680px) {
+  .app .header,
+  #app .header,
+  #app .head {
+    grid-template-columns: 44px minmax(0, 1fr) auto !important;
+    grid-template-areas: "home logo tools" "title title title";
+    gap: 5px 7px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 7px 9px 8px !important;
+  }
+  .app .header .lesson-home-slot,
+  #app .header .lesson-home-slot,
+  #app .head .lesson-home-slot {
+    grid-area: home;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.18);
+    cursor: pointer;
+  }
+  .app .header .logo,
+  #app .header .logo,
+  #app .head .logo { grid-area: logo; width: 38px !important; height: 38px !important; }
+  .app .header .title,
+  #app .header .title,
+  #app .head .title {
+    grid-area: title;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: clamp(.9rem, 4.3vw, 1.08rem) !important;
+    line-height: 1.12 !important;
+  }
+  .app .header .tools,
+  #app .header .tools,
+  #app .head .tools { grid-area: tools; gap: 4px !important; }
+  .app .header .tools button,
+  #app .header .tools button,
+  #app .head .tools button { min-width: 36px !important; min-height: 40px !important; }
+  .app:has(.header .lesson-home-slot) { grid-template-rows: auto 25px minmax(0,1fr) !important; }
+  #app:has(.head .lesson-home-slot) .dots { height: 22px; }
+  #app:has(.head .lesson-home-slot) .main { height: calc(100dvh - 107px) !important; }
+
+  /* Shared adapter for the Lesson 002–003 header family. */
+  .lesson-app .lesson-header {
+    grid-template-columns: 44px minmax(0, 1fr) auto !important;
+    grid-template-areas: "home brand controls" "title title title";
+    gap: 5px 7px !important;
+    min-height: 0 !important;
+    padding: 7px 9px 8px !important;
+  }
+  .lesson-app .lesson-header .lesson-home-slot {
+    grid-area: home;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.18);
+    cursor: pointer;
+  }
+  .lesson-app .lesson-header .brand { grid-area: brand; min-width: 0; }
+  .lesson-app .lesson-header .brand img { width: 38px !important; height: 38px !important; }
+  .lesson-app .lesson-header h1 {
+    grid-area: title;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: clamp(.9rem, 4.3vw, 1.08rem) !important;
+    line-height: 1.12 !important;
+  }
+  .lesson-app .lesson-header .header-controls,
+  .lesson-app .lesson-header .header-actions { grid-area: controls; grid-column: auto !important; gap: 4px !important; }
+  .lesson-app .lesson-header .language-switch button,
+  .lesson-app .lesson-header .lang button,
+  .lesson-app .lesson-header .sound,
+  .lesson-app .lesson-header .round { min-width: 36px !important; min-height: 40px !important; }
+  .lesson-app:has(.lesson-header .lesson-home-slot) { grid-template-rows: auto auto minmax(0,1fr) !important; }
+
+}

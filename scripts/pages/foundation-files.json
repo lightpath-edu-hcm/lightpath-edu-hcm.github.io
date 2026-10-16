@@ -1,0 +1,22 @@
+[
+  {
+    "path": "brand/light-path-logo.webp",
+    "sha256": "1eb1b9fcbdd32fa97bb925ec9258f2512faf06146757aa46fd2af9f1401ca752",
+    "bytes": 15272
+  },
+  {
+    "path": "favicon.svg",
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522
+  },
+  {
+    "path": "icons.svg",
+    "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+    "bytes": 5031
+  },
+  {
+    "path": "lesson-embed.css",
+    "sha256": "8b4ef01c32260fc22da44faf0db1f866c5c99b3ae405eb9706dcfe2a9d29de98",
+    "bytes": 9743
+  }
+]
