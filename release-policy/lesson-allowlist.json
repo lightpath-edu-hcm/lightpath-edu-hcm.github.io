@@ -14,6 +14,18 @@
       "approvalRef": "owner:20261016-lesson001-r3-1f206c62"
     },
     {
+      "id": "lesson-007",
+      "order": 7,
+      "slug": "bai-07",
+      "titleVi": "So sánh trong phạm vi 10",
+      "titleEn": "Compare Groups Within 10",
+      "moduleId": "readiness-compare-order",
+      "path": "/lessons/lesson-007/index.html",
+      "htmlSHA256": "df701c7f41420a3100f0d1ae759507eea4cd1e26bfa9cf60c166e2f2e8d7c8aa",
+      "assets": [],
+      "approvalRef": "owner:20261022-lesson007-publish"
+    },
+    {
       "id": "lesson-010",
       "order": 10,
       "slug": "bai-10",

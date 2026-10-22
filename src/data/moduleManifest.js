@@ -24,7 +24,9 @@ export const moduleManifest = [
     "descriptionEn": "Compare groups and put numbers in order.",
     "order": 2,
     "status": "active",
-    "lessonIds": []
+    "lessonIds": [
+      "lesson-007"
+    ]
   },
   {
     "id": "readiness-number-composition",

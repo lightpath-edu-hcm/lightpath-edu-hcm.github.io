@@ -12,6 +12,17 @@ export const lessonManifest = [
     "status": "published"
   },
   {
+    "id": "lesson-007",
+    "order": 7,
+    "slug": "bai-07",
+    "titleVi": "So sánh trong phạm vi 10",
+    "titleEn": "Compare Groups Within 10",
+    "moduleId": "readiness-compare-order",
+    "path": "/lessons/lesson-007/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
     "id": "lesson-010",
     "order": 10,
     "slug": "bai-10",
