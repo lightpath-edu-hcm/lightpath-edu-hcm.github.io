@@ -36,7 +36,9 @@ export const moduleManifest = [
     "descriptionEn": "Break apart and make familiar numbers.",
     "order": 3,
     "status": "active",
-    "lessonIds": []
+    "lessonIds": [
+      "lesson-010"
+    ]
   },
   {
     "id": "readiness-operations",

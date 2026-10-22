@@ -12,6 +12,18 @@
       "htmlSHA256": "1f206c62ce9097cdcb5a9a5a71d8ac461742f5c11766c31542f6dec1167c8347",
       "assets": [],
       "approvalRef": "owner:20261016-lesson001-r3-1f206c62"
+    },
+    {
+      "id": "lesson-010",
+      "order": 10,
+      "slug": "bai-10",
+      "titleVi": "Tách và tạo thành 10",
+      "titleEn": "Split and Make 10",
+      "moduleId": "readiness-number-composition",
+      "path": "/lessons/lesson-010/index.html",
+      "htmlSHA256": "6275907906d839f6e56545daf1b61033abc14221755dff8c080c440f93281f45",
+      "assets": [],
+      "approvalRef": "owner:20261022-lesson010-layout-publish"
     }
   ]
 }
