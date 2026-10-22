@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "verifiedRepositoryCommit": "d0a0123995a36594c0f4c9f4ca820e2809f613f0",
+  "verifiedRepositoryCommit": "3f7d98d293cc679670af88a21b04e0bcf1ca3ae1",
   "lessons": [
     {
       "id": "lesson-001",
@@ -13,6 +13,18 @@
       "htmlSHA256": "1f206c62ce9097cdcb5a9a5a71d8ac461742f5c11766c31542f6dec1167c8347",
       "assets": [],
       "approvalRef": "owner:20261016-lesson001-r3-1f206c62"
+    },
+    {
+      "id": "lesson-007",
+      "order": 7,
+      "slug": "bai-07",
+      "titleVi": "So sánh trong phạm vi 10",
+      "titleEn": "Compare Groups Within 10",
+      "moduleId": "readiness-compare-order",
+      "path": "/lessons/lesson-007/index.html",
+      "htmlSHA256": "df701c7f41420a3100f0d1ae759507eea4cd1e26bfa9cf60c166e2f2e8d7c8aa",
+      "assets": [],
+      "approvalRef": "owner:20261022-lesson007-publish"
     },
     {
       "id": "lesson-010",
