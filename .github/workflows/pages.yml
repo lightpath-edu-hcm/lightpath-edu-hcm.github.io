@@ -46,7 +46,9 @@ jobs:
       - run: pnpm test:policy
       - run: pnpm verify:source
       - run: pnpm build:pages
-      - run: pnpm exec playwright install --with-deps chromium
+      # The hosted Ubuntu runner already includes Chrome's native libraries.
+      # Runtime QA below still fails the release if any dependency is missing.
+      - run: pnpm exec playwright install chromium
       - run: pnpm qa:pages
       - run: pnpm prepare:release
       - id: verify
