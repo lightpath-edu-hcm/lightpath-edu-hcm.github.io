@@ -52,7 +52,9 @@ export const moduleManifest = [
     "descriptionEn": "Explore how quantities change.",
     "order": 4,
     "status": "active",
-    "lessonIds": []
+    "lessonIds": [
+      "lesson-012"
+    ]
   },
   {
     "id": "readiness-number-reasoning",

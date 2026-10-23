@@ -36,6 +36,18 @@
       "htmlSHA256": "6275907906d839f6e56545daf1b61033abc14221755dff8c080c440f93281f45",
       "assets": [],
       "approvalRef": "owner:20261022-lesson010-layout-publish"
+    },
+    {
+      "id": "lesson-012",
+      "order": 12,
+      "slug": "bai-12",
+      "titleVi": "Thêm vào, có tất cả bao nhiêu?",
+      "titleEn": "Add to Find the Total Within 10",
+      "moduleId": "readiness-operations",
+      "path": "/lessons/lesson-012/index.html",
+      "htmlSHA256": "0e9d412d610b69fa329ccc36d1184ff440f2d3c7ad27548280f2a3e3aedd89e0",
+      "assets": [],
+      "approvalRef": "owner:20261023-lesson012-addition-approved"
     }
   ]
 }

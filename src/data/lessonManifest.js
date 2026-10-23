@@ -32,6 +32,17 @@ export const lessonManifest = [
     "path": "/lessons/lesson-010/index.html",
     "programId": "school-readiness",
     "status": "published"
+  },
+  {
+    "id": "lesson-012",
+    "order": 12,
+    "slug": "bai-12",
+    "titleVi": "Thêm vào, có tất cả bao nhiêu?",
+    "titleEn": "Add to Find the Total Within 10",
+    "moduleId": "readiness-operations",
+    "path": "/lessons/lesson-012/index.html",
+    "programId": "school-readiness",
+    "status": "published"
   }
 ];
 export const publishedLessons = lessonManifest;
