@@ -53,7 +53,8 @@ export const moduleManifest = [
     "order": 4,
     "status": "active",
     "lessonIds": [
-      "lesson-012"
+      "lesson-012",
+      "lesson-013"
     ]
   },
   {
