@@ -48,6 +48,18 @@
       "htmlSHA256": "0e9d412d610b69fa329ccc36d1184ff440f2d3c7ad27548280f2a3e3aedd89e0",
       "assets": [],
       "approvalRef": "owner:20261023-lesson012-addition-approved"
+    },
+    {
+      "id": "lesson-013",
+      "order": 13,
+      "slug": "bai-13",
+      "titleVi": "Bớt đi, còn lại bao nhiêu?",
+      "titleEn": "Take Away: How Many Are Left?",
+      "moduleId": "readiness-operations",
+      "path": "/lessons/lesson-013/index.html",
+      "htmlSHA256": "42e9e6b6c49d4b9f46a88289c24132c5aec0baaf5a49c52522d7cf05b8e3556e",
+      "assets": [],
+      "approvalRef": "owner:20261023-lesson013-subtraction-publish"
     }
   ]
 }

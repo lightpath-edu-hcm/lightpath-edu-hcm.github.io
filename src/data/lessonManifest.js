@@ -43,6 +43,17 @@ export const lessonManifest = [
     "path": "/lessons/lesson-012/index.html",
     "programId": "school-readiness",
     "status": "published"
+  },
+  {
+    "id": "lesson-013",
+    "order": 13,
+    "slug": "bai-13",
+    "titleVi": "Bớt đi, còn lại bao nhiêu?",
+    "titleEn": "Take Away: How Many Are Left?",
+    "moduleId": "readiness-operations",
+    "path": "/lessons/lesson-013/index.html",
+    "programId": "school-readiness",
+    "status": "published"
   }
 ];
 export const publishedLessons = lessonManifest;
