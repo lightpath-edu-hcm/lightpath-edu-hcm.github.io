@@ -14,6 +14,66 @@
       "approvalRef": "owner:20261016-lesson001-r3-1f206c62"
     },
     {
+      "id": "lesson-002",
+      "order": 2,
+      "slug": "bai-02",
+      "titleVi": "Tạo nhóm 5",
+      "titleEn": "Make Groups from 1 to 5",
+      "moduleId": "readiness-quantity",
+      "path": "/lessons/lesson-002/index.html",
+      "htmlSHA256": "d33992677bb02a51023967bb61366fe1c6440914e40d715b302bc28f2b2b23ed",
+      "assets": [],
+      "approvalRef": "owner:20261024-b2-responsive-candidate-25001624-approved"
+    },
+    {
+      "id": "lesson-003",
+      "order": 3,
+      "slug": "bai-03",
+      "titleVi": "Tạo nhóm 10",
+      "titleEn": "Make Groups to 10",
+      "moduleId": "readiness-quantity",
+      "path": "/lessons/lesson-003/index.html",
+      "htmlSHA256": "9960b57ec0a9b8d4965849f1e8b3826cc4e26ba8b3146c0d73c729b5833b7220",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson003"
+    },
+    {
+      "id": "lesson-004",
+      "order": 4,
+      "slug": "bai-04",
+      "titleVi": "Số 0 và “không còn gì”",
+      "titleEn": "Zero and Empty",
+      "moduleId": "readiness-quantity",
+      "path": "/lessons/lesson-004/index.html",
+      "htmlSHA256": "e2c58ee758004f30260895012873bf80f271cdc92845e5562e522ea78253df28",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson004"
+    },
+    {
+      "id": "lesson-005",
+      "order": 5,
+      "slug": "bai-05",
+      "titleVi": "Đổi vị trí – số lượng có đổi không?",
+      "titleEn": "Same Number",
+      "moduleId": "readiness-quantity",
+      "path": "/lessons/lesson-005/index.html",
+      "htmlSHA256": "5e510ac3a75040f772cb23ee06d27b09f92eb77b9bf700b19da780c0928168ba",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson005"
+    },
+    {
+      "id": "lesson-006",
+      "order": 6,
+      "slug": "bai-06",
+      "titleVi": "So sánh trong phạm vi 5",
+      "titleEn": "Compare Within 5",
+      "moduleId": "readiness-compare-order",
+      "path": "/lessons/lesson-006/index.html",
+      "htmlSHA256": "4444f9cc356e06279e805e16af50653cb9030a1d41751845822f6e72bfe93b2d",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson006"
+    },
+    {
       "id": "lesson-007",
       "order": 7,
       "slug": "bai-07",
@@ -26,6 +86,30 @@
       "approvalRef": "owner:20261022-lesson007-publish"
     },
     {
+      "id": "lesson-008",
+      "order": 8,
+      "slug": "bai-08",
+      "titleVi": "Xếp theo thứ tự trong phạm vi 10",
+      "titleEn": "Order Within 10",
+      "moduleId": "readiness-compare-order",
+      "path": "/lessons/lesson-008/index.html",
+      "htmlSHA256": "d87d5ed12606ba5d6617cf32fba826b760606f35e86a36571b4ad11468cbf70a",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson008"
+    },
+    {
+      "id": "lesson-009",
+      "order": 9,
+      "slug": "bai-09",
+      "titleVi": "Tách và tạo thành 5",
+      "titleEn": "Make 5 in Different Ways",
+      "moduleId": "readiness-number-composition",
+      "path": "/lessons/lesson-009/index.html",
+      "htmlSHA256": "0d704329d3efa7a455909d41a1769839aa5b245ce9e7679b10ca7fad00331760",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson009"
+    },
+    {
       "id": "lesson-010",
       "order": 10,
       "slug": "bai-10",
@@ -36,6 +120,18 @@
       "htmlSHA256": "6275907906d839f6e56545daf1b61033abc14221755dff8c080c440f93281f45",
       "assets": [],
       "approvalRef": "owner:20261022-lesson010-layout-publish"
+    },
+    {
+      "id": "lesson-011",
+      "order": 11,
+      "slug": "bai-11",
+      "titleVi": "5 và thêm mấy?",
+      "titleEn": "5 and Some More",
+      "moduleId": "readiness-number-composition",
+      "path": "/lessons/lesson-011/index.html",
+      "htmlSHA256": "4c8a6afb870de4ba093cc7f1bc633db4b82b666114fe41efbfb50679067e1b7b",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson011"
     },
     {
       "id": "lesson-012",
@@ -60,6 +156,54 @@
       "htmlSHA256": "42e9e6b6c49d4b9f46a88289c24132c5aec0baaf5a49c52522d7cf05b8e3556e",
       "assets": [],
       "approvalRef": "owner:20261023-lesson013-subtraction-publish"
+    },
+    {
+      "id": "lesson-014",
+      "order": 14,
+      "slug": "bai-14",
+      "titleVi": "Cần thêm, bớt hay giữ nguyên?",
+      "titleEn": "Add, Take Away, or Keep the Same?",
+      "moduleId": "readiness-operations",
+      "path": "/lessons/lesson-014/index.html",
+      "htmlSHA256": "a448da9f5f2ca5e162226504e16ba011d2962e6d474c3b106dc0ab95de947caa",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson014"
+    },
+    {
+      "id": "lesson-015",
+      "order": 15,
+      "slug": "bai-15",
+      "titleVi": "Dấu + và câu chuyện thêm vào",
+      "titleEn": "Plus Sign and Adding Stories",
+      "moduleId": "readiness-operations",
+      "path": "/lessons/lesson-015/index.html",
+      "htmlSHA256": "ce550549b926d3611dc36e451e0ad3d5e98c397131bc08de251b04995efa7504",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson015"
+    },
+    {
+      "id": "lesson-016",
+      "order": 16,
+      "slug": "bai-16",
+      "titleVi": "Dấu − và câu chuyện bớt đi",
+      "titleEn": "Minus Sign and Taking Away Stories",
+      "moduleId": "readiness-operations",
+      "path": "/lessons/lesson-016/index.html",
+      "htmlSHA256": "3a1848bbd00072af4dbed95889d7e87582b4ef1c9e9974e6aae26dd94df2cc11",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson016"
+    },
+    {
+      "id": "lesson-017",
+      "order": 17,
+      "slug": "bai-17",
+      "titleVi": "Hai bên bằng nhau – dấu =",
+      "titleEn": "Both Sides Are Equal – The = Sign",
+      "moduleId": "readiness-operations",
+      "path": "/lessons/lesson-017/Bai-17-Bang-nhau.htm",
+      "htmlSHA256": "150de6c8c4cd6a9a0c0656d4d6c36aa10b0d7613a45f9102dc34f7ce755b353c",
+      "assets": [],
+      "approvalRef": "owner:20261024-golden-video-confirmed-lesson017"
     }
   ]
 }

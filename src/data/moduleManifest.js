@@ -11,7 +11,11 @@ export const moduleManifest = [
     "order": 1,
     "status": "active",
     "lessonIds": [
-      "lesson-001"
+      "lesson-001",
+      "lesson-002",
+      "lesson-003",
+      "lesson-004",
+      "lesson-005"
     ]
   },
   {
@@ -25,7 +29,9 @@ export const moduleManifest = [
     "order": 2,
     "status": "active",
     "lessonIds": [
-      "lesson-007"
+      "lesson-006",
+      "lesson-007",
+      "lesson-008"
     ]
   },
   {
@@ -39,7 +45,9 @@ export const moduleManifest = [
     "order": 3,
     "status": "active",
     "lessonIds": [
-      "lesson-010"
+      "lesson-009",
+      "lesson-010",
+      "lesson-011"
     ]
   },
   {
@@ -54,7 +62,11 @@ export const moduleManifest = [
     "status": "active",
     "lessonIds": [
       "lesson-012",
-      "lesson-013"
+      "lesson-013",
+      "lesson-014",
+      "lesson-015",
+      "lesson-016",
+      "lesson-017"
     ]
   },
   {
