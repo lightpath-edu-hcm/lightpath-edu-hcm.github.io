@@ -186,6 +186,17 @@ export const lessonManifest = [
     "path": "/lessons/lesson-017/Bai-17-Bang-nhau.htm",
     "programId": "school-readiness",
     "status": "published"
+  },
+  {
+    "id": "lesson-027",
+    "order": 27,
+    "slug": "bai-27",
+    "titleVi": "Thử thách hành trang vào lớp 1",
+    "titleEn": "Ready for Grade 1 Challenge",
+    "moduleId": "readiness-measure-shape-pattern",
+    "path": "/lessons/lesson-027/index.html",
+    "programId": "school-readiness",
+    "status": "published"
   }
 ];
 export const publishedLessons = lessonManifest;

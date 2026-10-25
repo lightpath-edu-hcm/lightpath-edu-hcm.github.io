@@ -204,6 +204,27 @@
       "htmlSHA256": "150de6c8c4cd6a9a0c0656d4d6c36aa10b0d7613a45f9102dc34f7ce755b353c",
       "assets": [],
       "approvalRef": "owner:20261024-golden-video-confirmed-lesson017"
+    },
+    {
+      "id": "lesson-027",
+      "order": 27,
+      "slug": "bai-27",
+      "titleVi": "Thử thách hành trang vào lớp 1",
+      "titleEn": "Ready for Grade 1 Challenge",
+      "moduleId": "readiness-measure-shape-pattern",
+      "path": "/lessons/lesson-027/index.html",
+      "htmlSHA256": "1bf499cbc63da9db8a970efd13563e3fb9ac97737cbfbbb4175c6f2dd35470a0",
+      "assets": [
+        {
+          "path": "lessons/lesson-027/assets/bibo.png",
+          "sha256": "ed7228222cf39fa45f8433c1c9f58ed1346b8707dd690af35867ab3c7e77ac1d"
+        },
+        {
+          "path": "lessons/lesson-027/assets/logo.webp",
+          "sha256": "daf3d4dfcb74e873befc6764a51069e124131a9cdbaad49c3011fc56545461f8"
+        }
+      ],
+      "approvalRef": "owner:20261025-publish-lesson027-golden-2ca9231d"
     }
   ]
 }

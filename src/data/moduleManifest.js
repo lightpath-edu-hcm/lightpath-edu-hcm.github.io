@@ -91,6 +91,8 @@ export const moduleManifest = [
     "descriptionEn": "Explore length, shapes, and patterns.",
     "order": 6,
     "status": "active",
-    "lessonIds": []
+    "lessonIds": [
+      "lesson-027"
+    ]
   }
 ];
