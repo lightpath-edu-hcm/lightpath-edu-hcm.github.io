@@ -66,7 +66,8 @@ export const moduleManifest = [
       "lesson-014",
       "lesson-015",
       "lesson-016",
-      "lesson-017"
+      "lesson-017",
+      "lesson-018"
     ]
   },
   {

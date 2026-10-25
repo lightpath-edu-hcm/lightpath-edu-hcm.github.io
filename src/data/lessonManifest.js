@@ -188,6 +188,17 @@ export const lessonManifest = [
     "status": "published"
   },
   {
+    "id": "lesson-018",
+    "order": 18,
+    "slug": "bai-18",
+    "titleVi": "So sánh hai số – dấu >, <, =",
+    "titleEn": "Compare Two Numbers – >, <, =",
+    "moduleId": "readiness-operations",
+    "path": "/lessons/lesson-018/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
     "id": "lesson-027",
     "order": 27,
     "slug": "bai-27",
