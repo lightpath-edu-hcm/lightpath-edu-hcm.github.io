@@ -80,7 +80,11 @@ export const moduleManifest = [
     "descriptionEn": "Number reasoning challenges.",
     "order": 5,
     "status": "active",
-    "lessonIds": []
+    "lessonIds": [
+      "lesson-019",
+      "lesson-020",
+      "lesson-021"
+    ]
   },
   {
     "id": "readiness-measure-shape-pattern",
@@ -93,6 +97,11 @@ export const moduleManifest = [
     "order": 6,
     "status": "active",
     "lessonIds": [
+      "lesson-022",
+      "lesson-023",
+      "lesson-024",
+      "lesson-025",
+      "lesson-026",
       "lesson-027"
     ]
   }

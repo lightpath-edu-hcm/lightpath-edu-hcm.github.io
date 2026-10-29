@@ -199,6 +199,94 @@ export const lessonManifest = [
     "status": "published"
   },
   {
+    "id": "lesson-019",
+    "order": 19,
+    "slug": "bai-19",
+    "titleVi": "Ô số bí mật",
+    "titleEn": "Mystery Number Box",
+    "moduleId": "readiness-number-reasoning",
+    "path": "/lessons/lesson-019/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
+    "id": "lesson-020",
+    "order": 20,
+    "slug": "bai-20",
+    "titleVi": "Một số – nhiều cách tạo thành",
+    "titleEn": "One Number, Many Ways",
+    "moduleId": "readiness-number-reasoning",
+    "path": "/lessons/lesson-020/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
+    "id": "lesson-021",
+    "order": 21,
+    "slug": "bai-21",
+    "titleVi": "Một câu chuyện – hai bước thay đổi",
+    "titleEn": "One Story, Two Changes",
+    "moduleId": "readiness-number-reasoning",
+    "path": "/lessons/lesson-021/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
+    "id": "lesson-022",
+    "order": 22,
+    "slug": "bai-22",
+    "titleVi": "Đo và so sánh độ dài",
+    "titleEn": "Measure and Compare Length",
+    "moduleId": "readiness-measure-shape-pattern",
+    "path": "/lessons/lesson-022/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
+    "id": "lesson-023",
+    "order": 23,
+    "slug": "bai-23",
+    "titleVi": "Nặng hơn, nhẹ hơn",
+    "titleEn": "Heavier and Lighter",
+    "moduleId": "readiness-measure-shape-pattern",
+    "path": "/lessons/lesson-023/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
+    "id": "lesson-024",
+    "order": 24,
+    "slug": "bai-24",
+    "titleVi": "Đường số: Tiến và lùi từng bước",
+    "titleEn": "Number Line: Forward and Back",
+    "moduleId": "readiness-measure-shape-pattern",
+    "path": "/lessons/lesson-024/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
+    "id": "lesson-025",
+    "order": 25,
+    "slug": "bai-25",
+    "titleVi": "Tách hình, ghép hình",
+    "titleEn": "Pieces and Shapes",
+    "moduleId": "readiness-measure-shape-pattern",
+    "path": "/lessons/lesson-025/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
+    "id": "lesson-026",
+    "order": 26,
+    "slug": "bai-26",
+    "titleVi": "Nhận biết và tiếp tục quy luật",
+    "titleEn": "Patterns – Find What Comes Next",
+    "moduleId": "readiness-measure-shape-pattern",
+    "path": "/lessons/lesson-026/index.html",
+    "programId": "school-readiness",
+    "status": "published"
+  },
+  {
     "id": "lesson-027",
     "order": 27,
     "slug": "bai-27",
