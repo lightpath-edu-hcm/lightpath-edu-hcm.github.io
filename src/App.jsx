@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { programManifest, activeProgram } from './data/programManifest'
 import { moduleManifest } from './data/moduleManifest'
 import { lessonManifest, publishedLessons } from './data/lessonManifest'
+import { installLessonBrowserHelp } from './lessonBrowserHelp'
 import './App.css'
 
 const readinessPath = '/hanh-trang-vao-lop-1'
@@ -47,6 +48,7 @@ function HomeIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"><path d
 function prepareLessonViewport(frame) {
   const doc = frame.contentDocument
   if (!doc?.head) return
+  installLessonBrowserHelp(frame)
   if (doc.getElementById('light-path-embed-layout')) return
   const stylesheet = doc.createElement('link')
   stylesheet.id = 'light-path-embed-layout'

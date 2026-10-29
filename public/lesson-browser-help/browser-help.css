@@ -1,0 +1,65 @@
+/* Scoped to Lesson 1's guidance dialog; no lesson layout overrides. */
+.browser-help, .browser-help * { box-sizing: border-box; }
+.browser-help {
+  width: min(440px, calc(100% - 24px));
+  max-width: calc(100% - 24px);
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px);
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid #087d7d;
+  border-radius: 18px;
+  color: #164b55;
+  background: #fff;
+  font: 15px/1.4 Arial, sans-serif;
+  text-align: left;
+  /* Prevent heuristic WebView text inflation inside this small UI only. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+.browser-help[open] { display: flex; flex-direction: column; }
+.browser-help::backdrop { background: #003c46b8; }
+.browser-help .browser-help-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  padding: 18px 16px 14px;
+  overscroll-behavior: contain;
+}
+.browser-help .browser-help-title {
+  margin: 0 0 10px;
+  color: #164b55;
+  font: bold clamp(20px, 5vw, 22px)/1.2 Arial, sans-serif;
+  text-align: left;
+}
+.browser-help .browser-help-description {
+  margin: 0 0 16px;
+  font: 15px/1.4 Arial, sans-serif;
+}
+.browser-help .browser-help-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.browser-help button, .browser-help a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 46px;
+  padding: 10px 8px;
+  border: 1px solid #087d7d;
+  border-radius: 10px;
+  background: #087d7d;
+  color: white;
+  font: bold 15px/1.35 Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+.browser-help .browser-help-footer { flex: 0 0 auto; padding: 12px 16px 16px; border-top: 1px solid #d6e9e7; background: #fff; }
+.browser-help .browser-help-continue { width: 100%; background: white; color: #087d7d; }
+.browser-help .browser-help-fallback,
+.browser-help .browser-help-status { margin: 12px 0 0; font: 14px/1.4 Arial, sans-serif; }
+.browser-help .browser-help-link { display: block; margin-top: 12px; font: 14px/1.4 Arial, sans-serif; }
+.browser-help input { width: 100%; min-width: 0; min-height: 44px; margin-top: 4px; padding: 8px; font: 14px/1.4 Arial, sans-serif; }
+.browser-help [hidden] { display: none !important; }
+.browser-help :focus-visible { outline: 3px solid #e8a620; outline-offset: 2px; }

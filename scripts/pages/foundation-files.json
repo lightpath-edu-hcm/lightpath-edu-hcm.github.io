@@ -18,5 +18,15 @@
     "path": "lesson-embed.css",
     "sha256": "8b4ef01c32260fc22da44faf0db1f866c5c99b3ae405eb9706dcfe2a9d29de98",
     "bytes": 9743
+  },
+  {
+    "path": "lesson-browser-help/browser-help.js",
+    "sha256": "8ddd2a9426c612180c591e1d87e4d60c6ae6543e79bc979f7f85bde694544b8e",
+    "bytes": 5079
+  },
+  {
+    "path": "lesson-browser-help/browser-help.css",
+    "sha256": "54168d61c37c898c378bda9e85c62f36a75fad6c0f96f36ab6c22bc2e9496c0f",
+    "bytes": 2375
   }
 ]
