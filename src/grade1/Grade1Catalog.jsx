@@ -6,7 +6,7 @@ const icons={
  addition:'<path d="M10 24h28M24 10v28"/>',
  subtraction:'<path d="M10 24h28"/>',
  clock:'<circle cx="24" cy="24" r="17"/><path d="M24 12v12l8 5"/>',
- numbers:'<text x="6" y="34" fill="currentColor" stroke="none" font-family="Georgia,serif" font-size="28" font-weight="bold">123</text>',
+ numbers:'<text x="6" y="34" fill="currentColor" stroke="none" font-family="Times New Roman, Times, serif" font-size="28" font-weight="bold">123</text>',
  compare:'<path d="m9 13 11 9-11 9m30-18-11 9 11 9"/><path d="M7 39h34" opacity=".3"/>',
  operations:'<path d="M8 20h14m-7-7v14m14 7h13"/><circle cx="33" cy="14" r="5" fill="currentColor" stroke="none" opacity=".3"/>',
  shapes:'<rect x="5" y="8" width="19" height="19" rx="4"/><circle cx="33" cy="31" r="11" fill="currentColor" stroke="none" opacity=".22"/><path d="m17 40 10-17 10 17Z"/>',
