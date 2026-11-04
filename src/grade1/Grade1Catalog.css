@@ -39,3 +39,6 @@
 .g1-stage-en,.g1-lesson-en{overflow-wrap:anywhere}.g1-lesson-code{text-transform:uppercase}
 
 .g1-page{background:#fbfcfd;min-height:calc(100dvh - 72px)}@media(max-width:680px){.g1-page{min-height:calc(100dvh - 64px)}}
+
+/* Compact Grade 1 catalog spacing requested by Owner. */
+.g1-shell{padding-top:8px}.g1-crumbs{margin-bottom:8px}.g1-hero{margin-bottom:14px;padding-top:0;padding-bottom:4px}.g1-hero--overview{display:block;margin-bottom:12px;padding:0}.g1-section-heading h1{font-size:22px;margin:0;letter-spacing:-.4px}@media(max-width:680px){.g1-shell{padding-top:6px}.g1-section-heading h1{font-size:20px}}
