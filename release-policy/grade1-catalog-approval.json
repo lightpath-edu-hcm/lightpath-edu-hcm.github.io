@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "approvalRef": "owner:grade1-14-stages-34-units-deployment-2026-11-04",
+  "catalogSHA256": "dd4875a4856467563e3764d5f22d94ceb6a450ad3d5ef6e7de0372c551e29d6c",
+  "previewSourceHash": "2f597c7e5113b1b0d3c854fc2ba3546cd8d7cbe0003496761cc4fbd8fd33b094",
+  "stageCount": 14,
+  "lessonCount": 34,
+  "allowLessonLaunch": false
+}

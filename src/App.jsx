@@ -4,6 +4,7 @@ import { moduleManifest } from './data/moduleManifest'
 import { lessonManifest, publishedLessons } from './data/lessonManifest'
 import { installLessonBrowserHelp } from './lessonBrowserHelp'
 import './App.css'
+import Grade1Catalog from './grade1/Grade1Catalog'
 
 const readinessPath = '/hanh-trang-vao-lop-1'
 const logoPath = '/brand/light-path-logo.webp'
@@ -83,4 +84,4 @@ function LessonPlayer({ lesson }) {
   return <main className={`lesson-player ${sharedMobileHome ? 'lesson-player--shared-mobile-home' : ''}`}><div className="lesson-frame-wrap"><iframe ref={frameRef} onLoad={(event) => prepareLessonViewport(event.currentTarget)} className="lesson-frame" src={lesson.path} title={`Bài ${lesson.order}: ${lesson.titleVi}`} width="100%" height="100%" allow="autoplay; fullscreen" allowFullScreen /></div><div className="lesson-toolbar"><LinkButton to={module ? `${readinessPath}/${module.slug}` : readinessPath} className="player-home" label="Về nhóm bài học"><HomeIcon /></LinkButton></div></main>
 }
 function NotFound() { return <><SiteHeader /><main className="page coming-page"><h1>Không tìm thấy nội dung</h1><LinkButton className="primary-button" to="/">Về trang chủ</LinkButton></main></> }
-export default function App() { const pathname = usePathname(); const lesson = useMemo(() => publishedLessons.find((l) => pathname === `${readinessPath}/${l.slug}`), [pathname]); const module = useMemo(() => moduleManifest.find((m) => pathname === `${readinessPath}/${m.slug}`), [pathname]); const program = useMemo(() => programManifest.find((p) => pathname === `/${p.slug}`), [pathname]); if (lesson) return <LessonPlayer lesson={lesson} />; if (pathname === '/' || pathname === '') return <HomePage />; if (pathname === readinessPath || pathname === `${readinessPath}/`) return <ProgramPage />; if (module) return <ModulePage module={module} />; if (program) return <ComingSoonPage program={program} />; return <NotFound /> }
+export default function App() { const pathname = usePathname(); const lesson = useMemo(() => publishedLessons.find((l) => pathname === `${readinessPath}/${l.slug}`), [pathname]); const module = useMemo(() => moduleManifest.find((m) => pathname === `${readinessPath}/${m.slug}`), [pathname]); const program = useMemo(() => programManifest.find((p) => pathname === `/${p.slug}`), [pathname]); if (lesson) return <LessonPlayer lesson={lesson} />; if (pathname === '/' || pathname === '') return <HomePage />; if (pathname === '/lop-1' || pathname === '/lop-1/') return <><SiteHeader /><Grade1Catalog /></>; if (pathname === readinessPath || pathname === `${readinessPath}/`) return <ProgramPage />; if (module) return <ModulePage module={module} />; if (program) return <ComingSoonPage program={program} />; return <NotFound /> }
