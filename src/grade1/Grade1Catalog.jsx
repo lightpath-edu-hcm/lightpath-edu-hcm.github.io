@@ -24,15 +24,11 @@ function NavLink({ to, children, ...props }) { return <a href={to} onClick={even
 function Icon({ kind }) { return <span className="g1-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" dangerouslySetInnerHTML={{ __html: icons[kind] || icons.numbers }} /></span> }
 function Arrow({ back = false }) { return <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={back ? 'M36 24H12m12-12L12 24l12 12' : 'M12 24h24M24 12l12 12-12 12'} /></svg> }
 function Unpublished() { return <span className="g1-status" data-status="coming-soon">Sắp ra mắt</span> }
-function Hero({ stage, headingRef }) { return <section className={'g1-hero' + (stage ? ' g1-stage-hero' : '')}>
-  <div><p className="g1-eyebrow">{stage ? 'CHẶNG ' + String(stage.order).padStart(2, '0') : 'MỖI CHẶNG NHỎ, MỘT KHÁM PHÁ MỚI'}</p>
-    <h1 ref={headingRef} tabIndex={-1}>{stage ? stage.titleVi : 'Toán tư duy 1'}</h1>
-    <p className="g1-subtitle">{stage ? stage.titleEn : 'Grade 1 Mathematics'}</p>
-    <p className="g1-intro">{stage ? 'Các bài học trong chặng đang được chuẩn bị. Cùng xem những điều con sẽ khám phá.' : 'Cùng con khám phá toán học, từng bước nhỏ mỗi ngày. Chọn một chặng để xem các bài học bên trong.'}</p>
-  </div>
-  {stage ? <Icon kind={stage.icon} /> : <div className="g1-hero-art" aria-hidden="true"><span>1</span><span>2</span><span>3</span></div>}
-</section> }
-function StageCards() { return <><div className="g1-section-heading"><h2>Hành trình khám phá</h2><p>{catalog.stages.length} chặng · {catalog.lessons.length} bài học</p></div>
+function Hero({ stage, headingRef }) {
+  if (!stage) return <section className="g1-hero g1-hero--overview"><p className="g1-intro">Cùng con khám phá toán học, từng bước nhỏ mỗi ngày. Chọn một chặng để xem các bài học bên trong.</p></section>
+  return <section className="g1-hero g1-stage-hero"><div><p className="g1-eyebrow">CHẶNG {stage.id}</p><h1 ref={headingRef} tabIndex={-1}>{stage.titleVi}</h1><p className="g1-subtitle">{stage.titleEn}</p><p className="g1-intro">Các bài học trong chặng đang được chuẩn bị. Cùng xem những điều con sẽ khám phá.</p></div><Icon kind={stage.icon} /></section>
+}
+function StageCards({ headingRef }) { return <><div className="g1-section-heading"><h1 ref={headingRef} tabIndex={-1}>Hành trình khám phá</h1><p>{catalog.stages.length} chặng · {catalog.lessons.length} bài học</p></div>
   <section className="g1-grid" aria-label="Danh sách chặng">{catalog.stages.map(stage => <NavLink key={stage.id} to={'/lop-1#chang/' + stage.id} className="g1-stage" data-stage-id={stage.id} aria-label={'Mở chặng ' + stage.id + ': ' + stage.titleVi}>
     <div className="g1-stage-top"><Icon kind={stage.icon} /><span className="g1-stage-code">CHẶNG {stage.id}</span></div>
     <h3>{stage.titleVi}</h3><p className="g1-stage-en">{stage.titleEn}</p>
@@ -49,7 +45,7 @@ export default function Grade1Catalog() {
   useEffect(() => { const previous = document.title; document.title = (stage ? stage.titleVi + ' | ' : '') + 'Toán tư duy 1 | Light Path'; return () => { document.title = previous } }, [stage])
   return <div className="g1-page"><main className="g1-shell"><nav className="g1-crumbs" aria-label="Đường dẫn"><NavLink to="/">Trang chủ</NavLink><span>›</span>{stageId ? <><NavLink to="/lop-1">Toán tư duy 1</NavLink><span>›</span><span aria-current="page">{stage ? stage.titleVi : 'Không tìm thấy chặng học'}</span></> : <span aria-current="page">Toán tư duy 1</span>}</nav>
     {stageId && <NavLink to="/lop-1" className="g1-back"><Arrow back /><span>Quay lại các chặng</span></NavLink>}
-    {stageId && !stage ? <h1 ref={headingRef} tabIndex={-1}>Không tìm thấy chặng học</h1> : <><Hero stage={stage} headingRef={headingRef} />{stage ? <LessonCards stage={stage} /> : <StageCards />}</>}
+    {stageId && !stage ? <h1 ref={headingRef} tabIndex={-1}>Không tìm thấy chặng học</h1> : <><Hero stage={stage} headingRef={headingRef} />{stage ? <LessonCards stage={stage} /> : <StageCards headingRef={headingRef} />}</>}
     <p className="g1-note"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.8" aria-hidden="true"><rect x="12" y="21" width="24" height="20" rx="4" /><path d="M17 21v-7a7 7 0 0 1 14 0v7" /></svg><span>Chỉ bài học đã được duyệt và xuất bản mới mở học.</span></p>
   </main></div>
 }
